@@ -12,7 +12,7 @@ public class Cart {
 	public void setItems0rdered(DigitalVideoDisc items0rdered, int i) {
 		this.items0rdered[i] = items0rdered;
 	}
-//add & remove
+//add & remove.
 	public void addDigitalVideoDisc(DigitalVideoDisc discA) {
 		if (qtyOrdered == MAX_NUMBERS_ORDER) {
 			System.out.println("Items current max. Unable get new order.");
@@ -49,6 +49,18 @@ public class Cart {
 		}
 		return total;
 	}
+//lab03, method-overloading addDigitalVideoDisc(DigitalVideoDisc [] dvdList)
+	public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+		for (int i = 0; i< dvdList.length; i ++) {
+			addDigitalVideoDisc(dvdList[i]);
+		}
+	}
+//lab03, method-overloading addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2)
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
+		addDigitalVideoDisc(dvd1);
+		addDigitalVideoDisc(dvd2);
+	}
+//lab03, method print()
 	public void print() {
 		System.out.println("***********************CART***********************");
 		for(int i = 0; i<qtyOrdered; i++) {
@@ -58,6 +70,7 @@ public class Cart {
 		System.out.println("Total cost: " + totalCost());
 		System.out.println("***************************************************");
 	}
+//lab03, method searchbyID(id)
 	public void searchbyID(int id) {
 		short count = 0;
 		for (int i = 0; i < qtyOrdered; i++) {
@@ -70,6 +83,7 @@ public class Cart {
 		if (count == qtyOrdered) System.out.println("No match result for id: "+ id);		
 
 	}
+//lab03, method searchbyTitle(title)
 	public void searchbyTitle(String title) {
 		short count = 0;
 		for (int i = 0; i < qtyOrdered; i++) {
