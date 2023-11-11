@@ -82,7 +82,7 @@ public class Cart {
 		}
 		if (count == qtyOrdered) System.out.println("No match result for id: "+ id);		
 
-	}
+	}//commit to merge feature/search-cart
 //lab03, method searchbyTitle(title)
 	public void searchbyTitle(String title) {
 		short count = 0;
