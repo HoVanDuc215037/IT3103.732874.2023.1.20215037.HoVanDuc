@@ -67,29 +67,30 @@ public class Cart {
 			if (getItems0rdered(i) != null) System.out.println(getItems0rdered(i).getId() + ".DVD - ["+getItems0rdered(i).getTitle()+"] - ["+getItems0rdered(i).getCategory()+"] - ["+getItems0rdered(i).getDirector()+"] - ["
 					+getItems0rdered(i).getLength()+"]: "+getItems0rdered(i).getCost()+"$");
 		}
-		System.out.println("Total cost: " + totalCost());
+		System.out.println("Total cost: " + totalCost()+"$");
 		System.out.println("***************************************************");
 	}
-//lab03, method searchbyID(id)
+//lab03, method print() is done.
+//lab03, method searchbyID(id).
 	public void searchbyID(int id) {
 		short count = 0;
 		for (int i = 0; i < qtyOrdered; i++) {
 			if (getItems0rdered(i).getId() == id) {
 				System.out.println("Id: "+id+ ". DVD -["+getItems0rdered(i).getTitle()+"] - ["+getItems0rdered(i).getCategory()+"] - ["+getItems0rdered(i).getDirector()+"] - ["
-						+getItems0rdered(i).getLength()+"]: "+getItems0rdered(i).getCost()+"$");
+						+getItems0rdered(i).getLength()+"]: "+getItems0rdered(i).getCost()+"$| Searching by ID~~");
 				return;
 			}else count++;
 		}
 		if (count == qtyOrdered) System.out.println("No match result for id: "+ id);		
 
 	}
-//lab03, method searchbyTitle(title)
+//lab03, method searchbyTitle(title).
 	public void searchbyTitle(String title) {
 		short count = 0;
 		for (int i = 0; i < qtyOrdered; i++) {
 			if (getItems0rdered(i).getTitle().toUpperCase().equals(title.toUpperCase())) {
-				System.out.println("DVD -["+getItems0rdered(i).getTitle()+"] - ["+getItems0rdered(i).getCategory()+"] - ["+getItems0rdered(i).getDirector()+"] - ["
-						+getItems0rdered(i).getLength()+"]: "+getItems0rdered(i).getCost()+"$");
+				System.out.println("Id: "+getItems0rdered(i).getId()+". DVD -["+getItems0rdered(i).getTitle()+"] - ["+getItems0rdered(i).getCategory()+"] - ["+getItems0rdered(i).getDirector()+"] - ["
+						+getItems0rdered(i).getLength()+"]: "+getItems0rdered(i).getCost()+"$| Searching by Title~~");
 				return;
 			}else count++;
 		}
