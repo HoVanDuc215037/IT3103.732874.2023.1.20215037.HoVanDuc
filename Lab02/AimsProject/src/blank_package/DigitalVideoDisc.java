@@ -6,7 +6,7 @@ public class DigitalVideoDisc {
 	private String director;
 	private int length;
 	private float cost;
-
+//Lab03 classify member & instance member
 	private static int nbDigitalVideoDiscs = 0;
 	private int id = nbDigitalVideoDiscs;
 //getter & setter
@@ -45,7 +45,7 @@ public class DigitalVideoDisc {
 	}
 
 	
-	public static int getNbDigitalVideoDiscs() {
+	public static int getNbDigitalVideoDiscs() {//Lab03 classify member & instance member
 		return nbDigitalVideoDiscs;
 	}
 	//constructor	
@@ -56,18 +56,18 @@ public class DigitalVideoDisc {
 		this.director = director;
 		this.length = length;
 		this.cost = cost;
-		nbDigitalVideoDiscs += 1;
+		nbDigitalVideoDiscs += 1;//Lab03 classify member & instance member
 	}
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
-		nbDigitalVideoDiscs += 1;
+		nbDigitalVideoDiscs += 1;//Lab03 classify member & instance member
 	}
 	public DigitalVideoDisc(String title, String category, float cost) {
 		super();
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
-		nbDigitalVideoDiscs += 1;
+		nbDigitalVideoDiscs += 1;//Lab03 classify member & instance member
 	}
 }
