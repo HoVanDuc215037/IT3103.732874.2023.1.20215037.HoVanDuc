@@ -1,4 +1,4 @@
-package Lab01;
+package hust.soict.dsai.lab01;
 import javax.swing.JOptionPane;
 public class FirstDialog{
 	public static void main(String[] srgs){
