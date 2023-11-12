@@ -9,5 +9,5 @@ public class ChoosingOption{
 		JOptionPane.showMessageDialog(null,
 				"You've chosen: " + (option == JOptionPane.YES_OPTION?"Yes":"No"));
 		System.exit(0);
-	}
+	}//commit to merge
 }
