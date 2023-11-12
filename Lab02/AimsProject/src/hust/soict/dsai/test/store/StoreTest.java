@@ -19,5 +19,5 @@ public class StoreTest {
 		duc_store.print();
 		duc_store.removeDVD(dvd2);
 		duc_store.print();
-	}
+	}//commit to merge
 }
