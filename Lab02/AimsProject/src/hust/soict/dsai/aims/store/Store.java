@@ -1,8 +1,39 @@
 package hust.soict.dsai.aims.store;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+//import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
+import java.util.ArrayList;
 
 public class Store {
+	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+//addMedia() & removeMedia()	
+	public void addMedia(Media A) {
+		if (itemsInStore.contains(A)) {
+			System.out.println("Store. Add media failed. This media had already existed.");
+		}else {
+			itemsInStore.add(A);
+			System.out.println("Store. Add media success.");		}
+	}
+	public void removeMedia(Media A) {
+		if (itemsInStore.contains(A)) {
+			itemsInStore.remove(A);
+			System.out.println("Store. Remove media success.");
+		}else {
+			System.out.println("Store. Remove media failed. This media does not exist.");
+		}		
+	}	
+//.
+// print()
+	public void print() {
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~STORE~~~~~~~~~~~~~~~~~~~~~~~~");
+		for (Media i : itemsInStore) {
+			System.out.println(i.toString());
+		}
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	}
+//.
+//-------------------------------------------------------------------------------------------
+/*
 	private static final int MAX_NUMBER_ITEMS = 100000;
 	private static int qty = 0;
 	private DigitalVideoDisc [] itemsInStore = new DigitalVideoDisc[MAX_NUMBER_ITEMS]; 
@@ -49,6 +80,5 @@ public class Store {
 		}
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	}
-	
+*/	
 }
-
