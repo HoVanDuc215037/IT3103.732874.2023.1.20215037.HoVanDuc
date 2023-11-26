@@ -1,15 +1,16 @@
 package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc {
-	private String title;
-	private String category;
-	private String director;
-	private int length;
-	private float cost;
+public class DigitalVideoDisc extends Disc implements Playable{
+//	private String title;
+//	private String category;
+//	private String director;
+//	private int length;
+//	private float cost;
 //Lab03 classify member & instance member
 	private static int nbDigitalVideoDiscs = 0;
-	private int id = nbDigitalVideoDiscs;
+///	private int id = nbDigitalVideoDiscs;
 //getter & setter
+/*
 	public String getTitle() {
 		return title;
 	}
@@ -43,6 +44,7 @@ public class DigitalVideoDisc {
 	public int getId() {
 		return id;
 	}
+	*/
 
 	
 	public static int getNbDigitalVideoDiscs() {//Lab03 classify member & instance member
@@ -69,5 +71,17 @@ public class DigitalVideoDisc {
 		this.category = category;
 		this.cost = cost;
 		nbDigitalVideoDiscs += 1;//Lab03 classify member & instance member
+	}
+	public String toString() {
+		String outputString;
+		outputString = "DVD| "+ this.id+". [" + this.title+"] [" + this.category+"] [" 
+					+ this.director+"] [" + this.length+"]: " + this.cost+"$";
+		return outputString;
+	}
+//implement Playable interface
+	public void play() {
+		System.out.println("Playing DVD: " + this.getTitle());
+		System.out.println("DVD length: " + this.getLength());
+
 	}
 }
