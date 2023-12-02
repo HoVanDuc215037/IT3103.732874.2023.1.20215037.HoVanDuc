@@ -46,7 +46,9 @@ public class DigitalVideoDisc extends Disc implements Playable{
 	}
 	*/
 
+	public DigitalVideoDisc() {
 	
+	}	
 	public static int getNbDigitalVideoDiscs() {//Lab03 classify member & instance member
 		return nbDigitalVideoDiscs;
 	}

@@ -27,6 +27,8 @@ public class Book extends Media{
 		this.category = category;//ccv
 		this.cost = cost;
 	}
+	public Book() {
+	}
 //getter&setter
 /*	public int getId() {
 		return id;
@@ -89,7 +91,7 @@ public class Book extends Media{
 //toString() method
 	public String toString() {
 		String outputString;
-		outputString = "Book| "+this.id+". [" + this.title+"] [" + this.category+"]: " + this.cost+"$";
+		outputString = "Book| "+this.id+". [" + this.title+"] [" + this.category+"] " +"["+this.authors+"] "+ this.cost+"$";
 		return outputString;//,,
 	}
 }

@@ -1,22 +1,17 @@
 package hust.soict.dsai.aims.media;
-import java.util.List;
-import java.util.ArrayList;
+
+//import java.util.Collection;
+//import java.util.Collection.sort(, Media.COMPARE_BY_TITLE_COST);
+import java.util.Comparator;
+//import java.util.Collection.sort(collection,Media.COMPARE_BY_TITLE_COST);
 
 public abstract class Media {
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost(); 
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
 	protected int id; 
 	protected String title; 
 	protected String category;
 	protected float cost;
-/*
-	ArrayList<Media> mediae = new ArrayList<Media>();
-//sample cd, dvd, book
-	Book book = new Book(1, "Book of moon", "imaginary", 10.01f);
-	CompactDisc cd = new CompactDisc("Celion Dion");
-	DigitalVideoDisc dvd = new DigitalVideoDisc("Title: Venom.Let's be the carnage!");
-	mediae.add(book);
-	mediae.add(cd);
-	mediae.add(dvd);
-*/
 //
 //getter&setter
 	public Media() {
@@ -69,4 +64,7 @@ public abstract class Media {
 		if (obj != o) return false;
 		return true;
 	}
+//
+
+//
 }
