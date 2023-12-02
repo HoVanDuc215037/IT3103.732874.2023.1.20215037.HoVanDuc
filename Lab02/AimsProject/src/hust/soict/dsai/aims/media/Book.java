@@ -27,6 +27,11 @@ public class Book extends Media{
 		this.category = category;//ccv
 		this.cost = cost;
 	}
+	public Book(String title) {
+		super();
+		// TODO Auto-generated constructor stub
+		this.title = title;
+	}
 	public Book() {
 	}
 //getter&setter

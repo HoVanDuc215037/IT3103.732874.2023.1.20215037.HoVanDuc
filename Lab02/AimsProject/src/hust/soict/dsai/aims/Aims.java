@@ -1,5 +1,4 @@
 package hust.soict.dsai.aims;
-
 import java.util.Scanner;
 import hust.soict.dsai.aims.store.Store;
 import hust.soict.dsai.aims.cart.Cart;
@@ -7,7 +6,6 @@ import hust.soict.dsai.aims.cart.Cart;
 public class Aims{
 	static Store store = new Store();
 	static Cart cart = new Cart();
-	
 	static boolean checkInput(int input, int options) {
 		if (input < 0 || input > options) return false;
 		return true;
@@ -45,7 +43,6 @@ public class Aims{
 		}		
 		keyboard.close();
 	}
-//
 	public static void main(String[] args) {
 		showMenu();
 	}
