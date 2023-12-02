@@ -58,7 +58,8 @@ public class CompactDisc extends Disc implements Playable{
 //toString() method
 	public String toString() {
 		String outputString;
-		outputString = "CD| "+this.id +". ["+ this.artist+"]. Track: "+this.tracks;
+		outputString = "CD| "+ this.id+". [" + this.title+"] [" + this.category+"]" + " ["
+							+ this.artist+"]. Track: "+this.tracks+ " "+this.cost+"$";
 		return outputString;
 	}
 }
