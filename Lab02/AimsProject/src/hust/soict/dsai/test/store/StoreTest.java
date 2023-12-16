@@ -6,7 +6,7 @@ import hust.soict.dsai.aims.store.Store;
 public class StoreTest {
 	public static void main(String args[]) {
 		Store duc_store = new Store();
-		CompactDisc cd = new ("id 4","title","cd",18.00f,"James",70, )
+		//CompactDisc cd = new (4,"title","cd", 18.00f);
 /*
 		//Create new dvd objects and add them to the cart 
 //		DigitalVideoDisc dvd1 = new DigitalVideoDisc (
